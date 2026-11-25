@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Lutador" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Versus/Scripts/lutador.gd" id="1"]
+[ext_resource type="SpriteFrames" path="res://Versus/Sprites/freddie_frames.tres" id="2"]
+[ext_resource type="Texture2D" path="res://Versus/Sprites/freddie/retrato.png" id="3"]
+
+[resource]
+script = ExtResource("1")
+nome_exibido = "FREDDIE"
+cor = Color(1, 0.85, 0.15, 1)
+retrato = ExtResource("3")
+sprite_frames = ExtResource("2")
+escala_sprite = 2.4
+deslocamento_pes = 4.0
+voz_duracao = 2.0
+nome_especial = "RAINHA DO ROCK"
+dano_especial = 25.0
+cor_especial = Color(1, 0.8, 0.1, 1)

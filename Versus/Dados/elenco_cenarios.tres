@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="ElencoCenarios" format=3]
+
+[ext_resource type="Script" path="res://Versus/Scripts/elenco_cenarios.gd" id="1"]
+[ext_resource type="Script" path="res://Versus/Scripts/cenario_versus.gd" id="2"]
+[ext_resource type="Texture2D" path="res://Assets/Cenários/e3b7af9d-8ca8-44fd-9591-c39a4e4f1910.jpg" id="img0"]
+[ext_resource type="Texture2D" path="res://Assets/Cenários/cenario 2.jpg" id="img1"]
+[ext_resource type="Texture2D" path="res://Assets/Cenários/cenario 3.jpg" id="img2"]
+
+[sub_resource type="Resource" id="Resource_map0"]
+script = ExtResource("2")
+nome_exibido = "QUADRA DA ESCOLA"
+foto = ExtResource("img0")
+fundo = ExtResource("img0")
+escurecer = 0.35
+
+[sub_resource type="Resource" id="Resource_map1"]
+script = ExtResource("2")
+nome_exibido = "PALCO DE CORTINAS"
+foto = ExtResource("img1")
+fundo = ExtResource("img1")
+escurecer = 0.3
+
+[sub_resource type="Resource" id="Resource_map2"]
+script = ExtResource("2")
+nome_exibido = "SALÃO SOMBRIO"
+foto = ExtResource("img2")
+fundo = ExtResource("img2")
+escurecer = 0.25
+
+[resource]
+script = ExtResource("1")
+cenarios = Array[ExtResource("2")]([SubResource("Resource_map0"), SubResource("Resource_map1"), SubResource("Resource_map2")])

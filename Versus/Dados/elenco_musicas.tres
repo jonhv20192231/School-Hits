@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="ElencoMusicas" format=3]
+
+[ext_resource type="Script" path="res://Versus/Scripts/elenco_musicas.gd" id="1"]
+[ext_resource type="Script" path="res://Versus/Scripts/musica_versus.gd" id="2"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_1xJbdY9B3A8_Steins-Gate-Opening-Fatima-by-Kanako-Itou_009_128k.mp3" id="au0"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Bt3D3Ca9nww_Death-Note-OP-1-4K-60FPS-Creditless_009_128k.mp3" id="au1"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_KvMY1uzSC1E_Cyberpunk-Edgerunners-I-Really-Want-to-Stay-At-Your-House-by-Rosa-Walton-Music-V_009_128k.mp3" id="au2"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Rfu5N2YAggc_Fallout-x-Eyes-Without-a-Face-first-half-looped-extended-version_009_128k.mp3" id="au3"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Vli10X4EQGU_Naruto-Shippuden-Op-Opening-8-4K-60FSP_009_128k.mp3" id="au4"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_frdz6P8uwv4_Naruto-Shippuden-Opening-3-Creditless-HD-60-fps_009_128k.mp3" id="au5"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_iV1o6tbZLZk_Persona-4-OST-02-A-Corner-of-Memories_008_128k.mp3" id="au6"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_j9Sn1nFGQQ8_Color-Your-Night_009_128k.mp3" id="au7"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_nU21rCWkuJw_Neon-Genesis-Evangelion-A-Cruel-Angel-s-Thesis-Anime-Intro-Opening-Theme-BluRay_009_128k.mp3" id="au8"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_f9X1C7pTu-M_BEACH-HOUSE-Space-Song_008_128k.mp3" id="au9"]
+
+[sub_resource type="Resource" id="Resource_m0"]
+script = ExtResource("2")
+nome_exibido = "Fatima"
+artista = "Steins Gate"
+audio = ExtResource("au0")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m1"]
+script = ExtResource("2")
+nome_exibido = "Death Note OP"
+artista = "Death Note"
+audio = ExtResource("au1")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m2"]
+script = ExtResource("2")
+nome_exibido = "I Really Want to Stay At Your House"
+artista = "Cyberpunk Edgerunners"
+audio = ExtResource("au2")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m3"]
+script = ExtResource("2")
+nome_exibido = "Eyes Without a Face"
+artista = "Fallout"
+audio = ExtResource("au3")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m4"]
+script = ExtResource("2")
+nome_exibido = "Opening 8"
+artista = "Naruto Shippuden"
+audio = ExtResource("au4")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m5"]
+script = ExtResource("2")
+nome_exibido = "Opening 3"
+artista = "Naruto Shippuden"
+audio = ExtResource("au5")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m6"]
+script = ExtResource("2")
+nome_exibido = "A Corner of Memories"
+artista = "Persona 4"
+audio = ExtResource("au6")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m7"]
+script = ExtResource("2")
+nome_exibido = "Color Your Night"
+artista = "Persona 3"
+audio = ExtResource("au7")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m8"]
+script = ExtResource("2")
+nome_exibido = "A Cruel Angels Thesis"
+artista = "Evangelion"
+audio = ExtResource("au8")
+bpm = 120.0
+
+[sub_resource type="Resource" id="Resource_m9"]
+script = ExtResource("2")
+nome_exibido = "Space Song"
+artista = "Beach House"
+audio = ExtResource("au9")
+bpm = 120.0
+
+[resource]
+script = ExtResource("1")
+musicas = Array[ExtResource("2")]([SubResource("Resource_m0"), SubResource("Resource_m1"), SubResource("Resource_m2"), SubResource("Resource_m3"), SubResource("Resource_m4"), SubResource("Resource_m5"), SubResource("Resource_m6"), SubResource("Resource_m7"), SubResource("Resource_m8"), SubResource("Resource_m9")])

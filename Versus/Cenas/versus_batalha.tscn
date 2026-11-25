@@ -1,0 +1,699 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Versus/Scripts/versus_batalha.gd" id="1_vihxe"]
+[ext_resource type="AudioStream" path="res://Assets/Musicas/YTDown.com_YouTube_Media_KvMY1uzSC1E_Cyberpunk-Edgerunners-I-Really-Want-to-Stay-At-Your-House-by-Rosa-Walton-Music-V_009_128k.mp3" id="2_gf2s1"]
+[ext_resource type="Texture2D" path="res://Assets/Cenários/e3b7af9d-8ca8-44fd-9591-c39a4e4f1910.jpg" id="3_72y3l"]
+[ext_resource type="Script" path="res://Versus/Scripts/versus_ritmo.gd" id="4_vw7i4"]
+[ext_resource type="Script" path="res://Versus/Scripts/versus_lutador_view.gd" id="5_n45sy"]
+[ext_resource type="Script" path="res://Versus/Scripts/versus_pista.gd" id="6_tgfqx"]
+[ext_resource type="Script" path="res://RhythmStage/Demo/rhythm_note_field.gd" id="7_12dap"]
+[ext_resource type="FontFile" path="res://Assets/fonte/MonsterFriendFore.otf" id="8_4mnjs"]
+[ext_resource type="Script" path="res://Versus/Scripts/versus_barra.gd" id="9_o5kkr"]
+[ext_resource type="PackedScene" path="res://Cenas/menu_de_pausa.tscn" id="10_17w1k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcsh6"]
+content_margin_left = 24.0
+content_margin_top = 16.0
+content_margin_right = 24.0
+content_margin_bottom = 16.0
+bg_color = Color(0.95686275, 0.94509804, 0.9019608, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6b2k"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.95686275, 0.94509804, 0.9019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqqpd"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.9137255, 0.627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34q1y"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.83137256, 0.3529412, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qalhk"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.83137256, 0.3529412, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8klgq"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.95686275, 0.94509804, 0.9019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgtjt"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.9137255, 0.627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30u3b"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.83137256, 0.3529412, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ud02y"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.83137256, 0.3529412, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pysad"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.95686275, 0.94509804, 0.9019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lcuwe"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.9137255, 0.627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npco7"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.83137256, 0.3529412, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38dq4"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.83137256, 0.3529412, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="GDScript" id="GDScript_y7jmb"]
+script/source = "extends Control
+
+# Atualizado com os nomes exatos dos seus botões
+@onready var retornar_ao_jogo_button: Button = $CenterContainer/VBoxContainer/RetornarAoJogo
+@onready var voltar_ao_jogo_button: Button = $CenterContainer/VBoxContainer/VoltarAoJogo
+
+func _ready() -> void:
+	# Esconde o menu inicialmente
+	visible = false
+	
+	# Conecta os sinais de clique dos botões
+	retornar_ao_jogo_button.pressed.connect(_on_retornar_ao_jogo_pressed)
+	voltar_ao_jogo_button.pressed.connect(_on_voltar_ao_jogo_pressed)
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Detecta se a tecla ESC foi pressionada
+	if event.is_action_pressed(\"ui_cancel\"):
+		toggle_pause()
+
+func toggle_pause() -> void:
+	var is_paused = get_tree().paused
+	get_tree().paused = !is_paused
+	visible = get_tree().paused
+
+func _on_retornar_ao_jogo_pressed() -> void:
+	toggle_pause()
+
+func _on_voltar_ao_jogo_pressed() -> void:
+	# 1. IMPORTANTE: Despausa o jogo antes de sair da cena atual
+	get_tree().paused = false
+	
+	get_tree().change_scene_to_file(\"res://Cenas/menu.tscn\")
+"
+
+[node name="BatalhaVersus" type="Node2D" unique_id=1652147284]
+script = ExtResource("1_vihxe")
+musicas = Array[AudioStream]([ExtResource("2_gf2s1")])
+fundo = ExtResource("3_72y3l")
+cpu_precisao = PackedFloat32Array(0.7, 0.85, 0.94, 0.985)
+cpu_desvio = PackedFloat32Array(0.075, 0.05, 0.035, 0.022)
+
+[node name="CamadaFundo" type="CanvasLayer" parent="." unique_id=1304024025]
+unique_name_in_owner = true
+layer = -10
+
+[node name="Fundo" type="TextureRect" parent="CamadaFundo" unique_id=112505306]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Escurecer" type="ColorRect" parent="CamadaFundo" unique_id=295335306]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0.1, 0.4)
+
+[node name="Chao" type="ColorRect" parent="CamadaFundo" unique_id=891032510]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+mouse_filter = 2
+color = Color(0.03, 0.02, 0.12, 0.6)
+
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=829272614]
+unique_name_in_owner = true
+
+[node name="SfxAcerto" type="AudioStreamPlayer" parent="." unique_id=1867184186]
+unique_name_in_owner = true
+
+[node name="SfxErro" type="AudioStreamPlayer" parent="." unique_id=728529531]
+unique_name_in_owner = true
+
+[node name="SfxEspecial" type="AudioStreamPlayer" parent="." unique_id=683521190]
+unique_name_in_owner = true
+
+[node name="Ritmo" type="Node" parent="." unique_id=31889000]
+unique_name_in_owner = true
+script = ExtResource("4_vw7i4")
+auto_start = false
+players = 2
+lane_order = PackedInt32Array(1, 0, 2)
+random_notes = true
+sfx_enabled = false
+save_result_in_root = false
+
+[node name="Lutadores" type="Node2D" parent="." unique_id=1433028630]
+
+[node name="LutadorP1" type="AnimatedSprite2D" parent="Lutadores" unique_id=1700017201]
+unique_name_in_owner = true
+script = ExtResource("5_n45sy")
+
+[node name="LutadorP2" type="AnimatedSprite2D" parent="Lutadores" unique_id=614286991]
+unique_name_in_owner = true
+script = ExtResource("5_n45sy")
+
+[node name="Interface" type="CanvasLayer" parent="." unique_id=1438781083]
+
+[node name="Pista" type="Control" parent="Interface" unique_id=1570601877 node_paths=PackedStringArray("player")]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 150.0
+offset_bottom = 630.0
+mouse_filter = 2
+script = ExtResource("6_tgfqx")
+player = NodePath("../../Ritmo")
+lane_nodes = Array[NodePath]([NodePath("PistaP1"), NodePath("PistaP2")])
+
+[node name="PistaP1" type="ColorRect" parent="Interface/Pista" unique_id=1497945380]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 480.0
+mouse_filter = 2
+color = Color(0.05, 0.05, 0.1, 0.7)
+
+[node name="PistaP2" type="ColorRect" parent="Interface/Pista" unique_id=393592311]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 480.0
+mouse_filter = 2
+color = Color(0.05, 0.05, 0.1, 0.7)
+
+[node name="NoteField" type="Control" parent="Interface/Pista" unique_id=1640261803 node_paths=PackedStringArray("player")]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("7_12dap")
+player = NodePath("../../../Ritmo")
+
+[node name="PainelP1" type="Control" parent="Interface" unique_id=120520369]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 14.0
+offset_right = 260.0
+offset_bottom = 134.0
+mouse_filter = 2
+
+[node name="TagP1" type="Label" parent="Interface/PainelP1" unique_id=218385464]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+text = "1P"
+
+[node name="NomeP1" type="Label" parent="Interface/PainelP1" unique_id=1372237103]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 26.0
+offset_right = 200.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+text = "NOME"
+clip_text = true
+
+[node name="VidaP1" type="Control" parent="Interface/PainelP1" unique_id=264965287]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = 64.0
+offset_right = 200.0
+offset_bottom = 86.0
+mouse_filter = 2
+script = ExtResource("9_o5kkr")
+
+[node name="EspecialP1" type="Control" parent="Interface/PainelP1" unique_id=1407144192]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = 92.0
+offset_right = 200.0
+offset_bottom = 102.0
+mouse_filter = 2
+script = ExtResource("9_o5kkr")
+cor_barra = Color(1, 0.7, 0.2, 1)
+cor_por_nivel = false
+usar_rastro = false
+piscar_quando_cheia = true
+
+[node name="DicaP1" type="Label" parent="Interface/PainelP1" unique_id=397186579]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 102.0
+offset_right = 200.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 0.9, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+
+[node name="PainelP2" type="Control" parent="Interface" unique_id=215012381]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1106.0
+offset_top = 14.0
+offset_right = 1306.0
+offset_bottom = 134.0
+mouse_filter = 2
+
+[node name="TagP2" type="Label" parent="Interface/PainelP2" unique_id=1448344880]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+text = "1P"
+
+[node name="NomeP2" type="Label" parent="Interface/PainelP2" unique_id=502156977]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 26.0
+offset_right = 200.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+text = "NOME"
+clip_text = true
+
+[node name="VidaP2" type="Control" parent="Interface/PainelP2" unique_id=1340508143]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = 64.0
+offset_right = 200.0
+offset_bottom = 86.0
+mouse_filter = 2
+script = ExtResource("9_o5kkr")
+
+[node name="EspecialP2" type="Control" parent="Interface/PainelP2" unique_id=739325882]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = 92.0
+offset_right = 200.0
+offset_bottom = 102.0
+mouse_filter = 2
+script = ExtResource("9_o5kkr")
+cor_barra = Color(1, 0.7, 0.2, 1)
+cor_por_nivel = false
+usar_rastro = false
+piscar_quando_cheia = true
+
+[node name="DicaP2" type="Label" parent="Interface/PainelP2" unique_id=1158444402]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 102.0
+offset_right = 200.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 0.9, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+
+[node name="Tempo" type="Label" parent="Interface" unique_id=458660219]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 14.0
+offset_right = 100.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 44
+theme_override_colors/font_color = Color(1, 0.83137256, 0.3529412, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+text = "02:00"
+horizontal_alignment = 1
+
+[node name="Contagem" type="Label" parent="Interface" unique_id=1744883425]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -150.0
+offset_right = 350.0
+offset_bottom = 70.0
+pivot_offset = Vector2(350, 110)
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 150
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mensagem" type="Label" parent="Interface" unique_id=554454085]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -130.0
+offset_right = 500.0
+offset_bottom = 50.0
+pivot_offset = Vector2(500, 90)
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 110
+theme_override_colors/font_color = Color(1, 0.35, 0.3, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BannerEspecial" type="Label" parent="Interface" unique_id=789222937]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -245.0
+offset_right = 500.0
+offset_bottom = -155.0
+pivot_offset = Vector2(500, 45)
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 56
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Flash" type="ColorRect" parent="Interface" unique_id=745856283]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Resultado" type="PanelContainer" parent="Interface" unique_id=398656749]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -270.0
+offset_right = 330.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qcsh6")
+
+[node name="Caixa" type="VBoxContainer" parent="Interface/Resultado" unique_id=190850360]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TituloResultado" type="Label" parent="Interface/Resultado/Caixa" unique_id=63990435]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(1, 0.83137256, 0.3529412, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 6
+text = "FIM!"
+horizontal_alignment = 1
+
+[node name="Colunas" type="HBoxContainer" parent="Interface/Resultado/Caixa" unique_id=410869815]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="ColunaP1" type="Label" parent="Interface/Resultado/Caixa/Colunas" unique_id=623893623]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 0
+
+[node name="ColunaP2" type="Label" parent="Interface/Resultado/Caixa/Colunas" unique_id=1402527568]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.15, 1)
+theme_override_constants/outline_size = 0
+
+[node name="BotaoRevanche" type="Button" parent="Interface/Resultado/Caixa" unique_id=706955041]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_l6b2k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lqqpd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_34q1y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qalhk")
+theme_override_colors/font_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_focus_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_pressed_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_hover_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 26
+text = "REVANCHE"
+
+[node name="BotaoTrocar" type="Button" parent="Interface/Resultado/Caixa" unique_id=1081286980]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8klgq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xgtjt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_30u3b")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ud02y")
+theme_override_colors/font_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_focus_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_pressed_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_hover_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 26
+text = "ESCOLHER LUTADORES"
+
+[node name="BotaoModos" type="Button" parent="Interface/Resultado/Caixa" unique_id=1842188276]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pysad")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lcuwe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_npco7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_38dq4")
+theme_override_colors/font_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_focus_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_pressed_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_colors/font_hover_color = Color(0.13333334, 0.1882353, 0.41960785, 1)
+theme_override_fonts/font = ExtResource("8_4mnjs")
+theme_override_font_sizes/font_size = 26
+text = "MODOS DE JOGO"
+
+[node name="CamadaPausa" type="CanvasLayer" parent="." unique_id=1589381864]
+layer = 10
+
+[node name="MenuDePausa" type="Control" parent="CamadaPausa" unique_id=612729983 instance=ExtResource("10_17w1k")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_y7jmb")

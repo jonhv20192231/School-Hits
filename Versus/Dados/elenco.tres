@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ElencoLutadores" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Versus/Scripts/elenco_lutadores.gd" id="1"]
+[ext_resource type="Script" path="res://Versus/Scripts/lutador.gd" id="2"]
+[ext_resource type="Resource" path="res://Versus/Dados/freddie.tres" id="3"]
+[ext_resource type="Resource" path="res://Versus/Dados/michael.tres" id="4"]
+
+[resource]
+script = ExtResource("1")
+lutadores = Array[ExtResource("2")]([ExtResource("3"), ExtResource("4")])

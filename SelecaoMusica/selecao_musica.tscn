@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://cbo5w0qdadojl"]
+
+[ext_resource type="Script" uid="uid://r6barr4f0a67" path="res://SelecaoMusica/selecao_musica.gd" id="1"]
+[ext_resource type="Script" uid="uid://ny6b3o8r32ag" path="res://SelecaoMusica/item_musica.gd" id="2_3m6c2"]
+[ext_resource type="AudioStream" uid="uid://chirxhayl6cm6" path="res://Assets/Musicas/YTDown.com_YouTube_Media_1xJbdY9B3A8_Steins-Gate-Opening-Fatima-by-Kanako-Itou_009_128k.mp3" id="3_6duxe"]
+[ext_resource type="Texture2D" uid="uid://mlifqxqgud30" path="res://Assets/IconeDasMusicas/Steins-Gates-removebg-preview.png" id="4_6duxe"]
+[ext_resource type="AudioStream" uid="uid://ch0pn0mr42c2j" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Bt3D3Ca9nww_Death-Note-OP-1-4K-60FPS-Creditless_009_128k.mp3" id="5_17vse"]
+[ext_resource type="Texture2D" uid="uid://blk04pu6igjcb" path="res://Assets/IconeDasMusicas/DeathNote.jpg" id="6_u43u1"]
+[ext_resource type="AudioStream" uid="uid://bcjxcdfdijcn2" path="res://Assets/Musicas/YTDown.com_YouTube_Media_frdz6P8uwv4_Naruto-Shippuden-Opening-3-Creditless-HD-60-fps_009_128k.mp3" id="7_i6n6m"]
+[ext_resource type="Texture2D" uid="uid://c434cyjkdabct" path="res://Assets/IconeDasMusicas/Naruto01.jpg" id="8_6jyiq"]
+[ext_resource type="AudioStream" uid="uid://dq7c1dtuyqbqe" path="res://Assets/Musicas/YTDown.com_YouTube_Media_nU21rCWkuJw_Neon-Genesis-Evangelion-A-Cruel-Angel-s-Thesis-Anime-Intro-Opening-Theme-BluRay_009_128k.mp3" id="9_ru5os"]
+[ext_resource type="Texture2D" uid="uid://lfld7oahh4gq" path="res://Assets/IconeDasMusicas/Evangelion.png" id="10_074lr"]
+[ext_resource type="AudioStream" uid="uid://dpaf0b0b07ecg" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Vli10X4EQGU_Naruto-Shippuden-Op-Opening-8-4K-60FSP_009_128k.mp3" id="11_sngnw"]
+[ext_resource type="Texture2D" uid="uid://dh4addmr76b0x" path="res://Assets/IconeDasMusicas/Naruto02.jpg" id="12_7csla"]
+[ext_resource type="AudioStream" uid="uid://dg2tdcac4w6lw" path="res://Assets/Musicas/YTDown.com_YouTube_Media_f9X1C7pTu-M_BEACH-HOUSE-Space-Song_008_128k.mp3" id="13_y6rfb"]
+[ext_resource type="Texture2D" uid="uid://ds8su6rxrrlpl" path="res://Assets/IconeDasMusicas/beach house.png" id="14_plfl0"]
+[ext_resource type="AudioStream" uid="uid://dyetxb423ldll" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Rfu5N2YAggc_Fallout-x-Eyes-Without-a-Face-first-half-looped-extended-version_009_128k.mp3" id="15_pry0q"]
+[ext_resource type="Texture2D" uid="uid://d1ncdurypmbpu" path="res://Assets/IconeDasMusicas/billy idol.jpg" id="16_1ygmn"]
+[ext_resource type="AudioStream" uid="uid://bchiyxvdkmhf0" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Uoox9fpmDP0_Bôa-Duvet-Official-Video_009_128k.mp3" id="17_85mmx"]
+[ext_resource type="Texture2D" uid="uid://7njv6045remg" path="res://Assets/IconeDasMusicas/vagabond.jpg" id="18_wr1qc"]
+[ext_resource type="AudioStream" uid="uid://did5chjfcrqak" path="res://Assets/Musicas/Beach-House-Levitation.mp3" id="19_wr1qc"]
+[ext_resource type="Texture2D" uid="uid://dooji3cc2g6iw" path="res://Assets/Menu/c87888c4-ea93-4046-907e-cadd21c2ec83.jpg" id="20_tn007"]
+[ext_resource type="AudioStream" uid="uid://b2fwvh3snpv7a" path="res://Assets/Musicas/Keane - Somewhere Only We Know.mp3" id="20_yefrq"]
+[ext_resource type="Texture2D" uid="uid://cx2538uvyjga6" path="res://Assets/IconeDasMusicas/Keane.jpg" id="21_4xr7c"]
+[ext_resource type="AudioStream" uid="uid://7s3cocienutp" path="res://Assets/Musicas/Harry-Styles-Fine-Line.mp3" id="22_24itl"]
+[ext_resource type="Texture2D" uid="uid://cdgcufc4v2chf" path="res://Assets/IconeDasMusicas/harry style.jpg" id="23_boaiq"]
+[ext_resource type="AudioStream" uid="uid://bmqx4whgpeut5" path="res://Assets/Musicas/Lord-Huron-The-Night-We-Met.mp3" id="24_o74w7"]
+[ext_resource type="Texture2D" uid="uid://jtf2gg16dsv2" path="res://Assets/IconeDasMusicas/Lord huron.jpg" id="25_f7k41"]
+[ext_resource type="AudioStream" uid="uid://db7bhgagshh6r" path="res://Assets/Musicas/Oasis-Wonderwall.mp3" id="26_braso"]
+[ext_resource type="Texture2D" uid="uid://q5wsh5wxb7g3" path="res://Assets/IconeDasMusicas/oasis wonderwall.jpg" id="27_o5enq"]
+[ext_resource type="AudioStream" uid="uid://bt8sgonob3hbb" path="res://Assets/Musicas/Slowdive-When-the-Sun-Hits.mp3" id="28_48b47"]
+[ext_resource type="Texture2D" uid="uid://wcx8cmtvp1to" path="res://Assets/IconeDasMusicas/slowdive when the sun hits icon.jpg" id="29_gd3h6"]
+[ext_resource type="AudioStream" uid="uid://b5tie6qi0a7pn" path="res://Assets/Musicas/The-Killers-Mr-Brightside.mp3" id="30_3orkj"]
+[ext_resource type="Texture2D" uid="uid://bn5y0nnro0tod" path="res://Assets/IconeDasMusicas/the killers mr. brightside icon.jpg" id="31_dmhqi"]
+[ext_resource type="FontFile" uid="uid://ftolv0bnr8ki" path="res://Assets/fonte/MonsterFriendFore.otf" id="33_dmhqi"]
+
+[sub_resource type="Resource" id="Resource_df1ni"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Steins;Gate Opening "
+artista = "Fatima by Kanako Itou"
+audio = ExtResource("3_6duxe")
+capa = ExtResource("4_6duxe")
+cena_destino = "uid://ds2atgdqwd6cc"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_6duxe"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Death Note Opening 01"
+artista = "NIGHTMARE"
+audio = ExtResource("5_17vse")
+capa = ExtResource("6_u43u1")
+cena_destino = "uid://cowsugoc4padd"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_i6n6m"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Naruto Shippuden Opening 3 | Blue Bird"
+audio = ExtResource("7_i6n6m")
+capa = ExtResource("8_6jyiq")
+cena_destino = "uid://dlvv7v036rwr1"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_ru5os"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Neon Genesis Evangelion (A Cruel Angel's Thesis)"
+audio = ExtResource("9_ru5os")
+capa = ExtResource("10_074lr")
+cena_destino = "uid://b7f2icynwwbuj"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_sngnw"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Naruto Shippuden Opening 8 Diver by NICO"
+artista = "NICO"
+audio = ExtResource("11_sngnw")
+capa = ExtResource("12_7csla")
+cena_destino = "uid://cvkjuilw6wgk1"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_uw7gg"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Space Song"
+artista = "Beach House "
+audio = ExtResource("13_y6rfb")
+capa = ExtResource("14_plfl0")
+cena_destino = "uid://jb5pevcsbhl7"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_y6rfb"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Eyes Without A Face"
+artista = "Billy Idol"
+audio = ExtResource("15_pry0q")
+capa = ExtResource("16_1ygmn")
+cena_destino = "uid://cqja6k8a01kt8"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_85mmx"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Boa"
+artista = "Duvet "
+audio = ExtResource("17_85mmx")
+capa = ExtResource("18_wr1qc")
+inicio_previa = 13.0
+cena_destino = "uid://ccurspvmlgm5k"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_f41hj"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Levitation"
+artista = "Beach House"
+audio = ExtResource("19_wr1qc")
+capa = ExtResource("14_plfl0")
+cena_destino = "uid://7liqrh7u4ds8"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_b5edf"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Somewhere only we know"
+artista = "Keane"
+audio = ExtResource("20_yefrq")
+capa = ExtResource("21_4xr7c")
+cena_destino = "uid://bg2g2k7uki30i"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_yefrq"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Fine Line"
+artista = "Harry Styles"
+audio = ExtResource("22_24itl")
+capa = ExtResource("23_boaiq")
+cena_destino = "uid://cfjybpyl521qf"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_24itl"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "The night we met"
+artista = "Lord Huron "
+audio = ExtResource("24_o74w7")
+capa = ExtResource("25_f7k41")
+inicio_previa = 123.0
+cena_destino = "uid://cqvllw2oxswk5"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_o74w7"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "Wonderwall"
+artista = "Oasis"
+audio = ExtResource("26_braso")
+capa = ExtResource("27_o5enq")
+inicio_previa = 45.0
+cena_destino = "uid://b2tythvn7eowk"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_gd3h6"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "When the sun hits "
+artista = "Slowdive"
+audio = ExtResource("28_48b47")
+capa = ExtResource("29_gd3h6")
+inicio_previa = 103.0
+cena_destino = "uid://dumpq4g8irrrr"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[sub_resource type="Resource" id="Resource_nhque"]
+script = ExtResource("2_3m6c2")
+nome_exibido = "The killers mr. brightside i"
+artista = "The Killers"
+audio = ExtResource("30_3orkj")
+capa = ExtResource("31_dmhqi")
+inicio_previa = 77.0
+cena_destino = "uid://c3et5e6mx84b7"
+metadata/_custom_type_script = "uid://ny6b3o8r32ag"
+
+[node name="SelecaoMusica" type="Control" unique_id=138175276]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+musicas = Array[ExtResource("2_3m6c2")]([SubResource("Resource_df1ni"), SubResource("Resource_6duxe"), SubResource("Resource_i6n6m"), SubResource("Resource_ru5os"), SubResource("Resource_sngnw"), SubResource("Resource_uw7gg"), SubResource("Resource_y6rfb"), SubResource("Resource_85mmx"), SubResource("Resource_f41hj"), SubResource("Resource_b5edf"), SubResource("Resource_yefrq"), SubResource("Resource_24itl"), SubResource("Resource_o74w7"), SubResource("Resource_gd3h6"), SubResource("Resource_nhque")])
+cena_ao_voltar = "uid://cyekt36wonsa5"
+titulo = "ESCOLHA A MUSICA"
+fundo = ExtResource("20_tn007")
+fonte = ExtResource("33_dmhqi")
