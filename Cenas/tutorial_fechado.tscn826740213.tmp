@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dnc8dg4n2y0po"]
+
+[ext_resource type="Script" uid="uid://b6gaa3rkdn4au" path="res://scripts/tutorial_fechado.gd" id="1_6q0u1"]
+[ext_resource type="VideoStream" uid="uid://c0w2awrtvodyj" path="res://cutscenes/Comemoracao.ogv" id="2_auycp"]
+[ext_resource type="FontFile" uid="uid://cn58a0bknuj8j" path="res://Assets/fonte/MonsterFriendBack.otf" id="4_p0eiy"]
+[ext_resource type="AudioStream" uid="uid://dm3n55innelav" path="res://Assets/Musicas/recrutar.mp3" id="5_ye6h8"]
+
+[node name="TutorialFechado" type="Node2D" unique_id=1740365842]
+script = ExtResource("1_6q0u1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1916156217]
+offset_right = 1368.0
+offset_bottom = 762.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stream = ExtResource("2_auycp")
+autoplay = true
+loop = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Proximofase" type="Button" parent="." unique_id=1809144300]
+offset_left = 991.0
+offset_top = 682.0
+offset_right = 1340.0
+offset_bottom = 739.0
+theme_override_fonts/font = ExtResource("4_p0eiy")
+theme_override_font_sizes/font_size = 25
+text = "Proximo desafio"
+
+[node name="Parabéns" type="Label" parent="." unique_id=315083814]
+offset_left = 262.0
+offset_top = 176.0
+offset_right = 1157.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("4_p0eiy")
+theme_override_font_sizes/font_size = 25
+text = "Parabens, voce passou pelo tutorial!!!
+
+Agora o verdadeiro desafio lhe espera"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1340557284]
+stream = ExtResource("5_ye6h8")
+autoplay = true
+
+[connection signal="pressed" from="Proximofase" to="." method="_on_proximofase_pressed"]

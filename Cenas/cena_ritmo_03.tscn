@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://coixu5h21g6ob"]
+
+[ext_resource type="Texture2D" uid="uid://x7c7hcwooqed" path="res://Assets/Cenários/cenario 1.jpg" id="1_s6g6k"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="2_pm1om"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="3_8die2"]
+[ext_resource type="AudioStream" uid="uid://drq8p1ewjhsqp" path="res://Assets/Musicas/YTDown.com_YouTube_Media_VcadjqICMuQ_ME-DÊ-MOTIVO-Cowboy-Bebop-カウボーイビバップ_009_128k.mp3" id="4_hlgus"]
+
+[node name="CenaRitmo03" type="Node2D" unique_id=401934240]
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=946319861]
+offset_right = 1369.0
+offset_bottom = 771.0
+size_flags_vertical = 4
+texture = ExtResource("1_s6g6k")
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("2_pm1om")]
+offset_left = 151.0
+offset_top = 283.0
+offset_right = 151.0
+offset_bottom = 283.0
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("3_8die2")]
+duration_seconds = 300.0
+players = 1
+lane_order = PackedInt32Array(2)
+next_scene_path = "uid://dnc8dg4n2y0po"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1927053210]
+stream = ExtResource("4_hlgus")
+autoplay = true

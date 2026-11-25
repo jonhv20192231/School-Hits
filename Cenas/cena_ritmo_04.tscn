@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ymnkp61raftx"]
+
+[ext_resource type="Texture2D" uid="uid://x7c7hcwooqed" path="res://Assets/Cenários/cenario 1.jpg" id="1_ya36x"]
+
+[node name="CenaRitmo04" type="Node2D" unique_id=1826780294]
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=607760492]
+offset_right = 1369.0
+offset_bottom = 771.0
+size_flags_vertical = 4
+texture = ExtResource("1_ya36x")

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dtorwsqrtc4j4"]
+
+[ext_resource type="VideoStream" uid="uid://2mn8u6pxgd7p" path="res://Assets/VideoParaMusicas/Cyberclipe.ogv" id="1_26ee4"]
+[ext_resource type="AudioStream" uid="uid://clmd8kl2qa6p" path="res://Assets/Musicas/YTDown.com_YouTube_Media_KvMY1uzSC1E_Cyberpunk-Edgerunners-I-Really-Want-to-Stay-At-Your-House-by-Rosa-Walton-Music-V_009_128k.mp3" id="3_5e55p"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="3_xjdit"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="4_xjdit"]
+
+[node name="CenaRitmoCoop01" type="Node2D" unique_id=380470140]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1674723218]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_26ee4")
+autoplay = true
+loop = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=744345989]
+stream = ExtResource("3_5e55p")
+autoplay = true
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("3_xjdit")]
+duration_seconds = 259.0
+players = 2
+next_scene_path = "uid://bhvq2b85imhta"
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("4_xjdit")]
+offset_left = 154.0
+offset_top = 201.0
+offset_right = 154.0
+offset_bottom = 201.0

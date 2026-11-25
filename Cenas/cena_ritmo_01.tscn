@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://6edgvqt0h678"]
+
+[ext_resource type="Texture2D" uid="uid://x7c7hcwooqed" path="res://Assets/Cenários/cenario 1.jpg" id="1_swea7"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="2_iih1e"]
+[ext_resource type="AudioStream" uid="uid://b4tr6fqo0l7nh" path="res://Assets/Musicas/YTDown.com_YouTube_Media_YPLQHeUSX2g_Legião-Urbana-Tempo-perdido_007_128k.mp3" id="3_4ltt7"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="4_us3jk"]
+
+[node name="CenaRitmo01" type="Node2D" unique_id=380470140]
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=2103067062]
+offset_right = 1369.0
+offset_bottom = 771.0
+size_flags_vertical = 4
+texture = ExtResource("1_swea7")
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("2_iih1e")]
+duration_seconds = 221.0
+players = 1
+next_scene_path = "uid://cmf5ga1g7yjug"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=154068755]
+stream = ExtResource("3_4ltt7")
+autoplay = true
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("4_us3jk")]
+offset_left = 153.0
+offset_top = 256.0
+offset_right = 153.0
+offset_bottom = 256.0

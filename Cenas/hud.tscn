@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bswhkd6vrkht6"]
+
+[ext_resource type="Texture2D" uid="uid://bqqv8yraonbbs" path="res://Assets/Hud/hud vida.png" id="1_1pfdj"]
+[ext_resource type="FontFile" uid="uid://ftolv0bnr8ki" path="res://Assets/fonte/MonsterFriendFore.otf" id="2_5udud"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1364769275]
+
+[node name="Vida2" type="Node" parent="." unique_id=854376636]
+
+[node name="BarradeVida" type="Sprite2D" parent="Vida2" unique_id=1324453032]
+position = Vector2(149.00002, 70)
+scale = Vector2(0.29773468, 0.7310924)
+texture = ExtResource("1_1pfdj")
+
+[node name="Vida" type="Label" parent="Vida2" unique_id=1957508401]
+modulate = Color(0.39215687, 1, 1, 1)
+offset_left = 135.0
+offset_top = 56.0
+offset_right = 160.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("2_5udud")
+theme_override_font_sizes/font_size = 25
+text = "0"
+
+[node name="LetraVida" type="Label" parent="Vida2" unique_id=1385159707]
+modulate = Color(0, 0, 0, 1)
+offset_left = 72.0
+offset_top = 95.0
+offset_right = 162.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("2_5udud")
+theme_override_font_sizes/font_size = 25
+text = "Vida"
+
+[node name="Pontuacao" type="Node" parent="." unique_id=298852566]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Pontuacao" unique_id=774055852]
+modulate = Color(1, 0.5764706, 1, 1)
+position = Vector2(1288, 66)
+scale = Vector2(0.29430258, 0.7268445)
+texture = ExtResource("1_1pfdj")
+
+[node name="Letrapontuar" type="Label" parent="Pontuacao" unique_id=211531604]
+modulate = Color(0.0021815682, 0.0007954988, 0.00017706523, 1)
+offset_left = 1074.0
+offset_top = 95.0
+offset_right = 1309.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("2_5udud")
+theme_override_font_sizes/font_size = 25
+text = "Pontuacao"
+
+[node name="Label" type="Label" parent="Pontuacao" unique_id=263461919]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -89.0
+offset_top = 55.0
+offset_right = -64.0
+offset_bottom = 81.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_5udud")
+theme_override_font_sizes/font_size = 25
+text = "0"

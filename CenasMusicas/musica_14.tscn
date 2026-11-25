@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dumpq4g8irrrr"]
+
+[ext_resource type="Script" uid="uid://cxnonrj25h4qs" path="res://CenasMusicas/musica_01.gd" id="1_xl0tn"]
+[ext_resource type="VideoStream" uid="uid://3rym1vjj0t0e" path="res://Assets/VideoParaMusicas/Slowdive.ogv" id="2_xl0tn"]
+[ext_resource type="AudioStream" uid="uid://bt8sgonob3hbb" path="res://Assets/Musicas/Slowdive-When-the-Sun-Hits.mp3" id="3_xl0tn"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="4_clxav"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="5_g7fpr"]
+
+[node name="Musica14" type="Node2D" unique_id=1706521151]
+script = ExtResource("1_xl0tn")
+
+[node name="GifDeFundo" type="VideoStreamPlayer" parent="." unique_id=1436423326]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_xl0tn")
+autoplay = true
+loop = true
+
+[node name="Musicadefundo" type="AudioStreamPlayer" parent="." unique_id=547563431]
+stream = ExtResource("3_xl0tn")
+autoplay = true
+
+[node name="RhythmDemo" parent="." unique_id=702561301 instance=ExtResource("4_clxav")]
+duration_seconds = 289.0
+players = 1
+next_scene_path = "uid://cbo5w0qdadojl"
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("5_g7fpr")]
+offset_left = 152.0
+offset_top = 202.0
+offset_right = 152.0
+offset_bottom = 202.0

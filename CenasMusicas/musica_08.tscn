@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ccurspvmlgm5k"]
+
+[ext_resource type="Script" uid="uid://cxnonrj25h4qs" path="res://CenasMusicas/musica_01.gd" id="1_1qorm"]
+[ext_resource type="VideoStream" uid="uid://x6atsfoplq70" path="res://Assets/VideoParaMusicas/Vagabond.ogv" id="2_6ou3y"]
+[ext_resource type="AudioStream" uid="uid://bchiyxvdkmhf0" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Uoox9fpmDP0_Bôa-Duvet-Official-Video_009_128k.mp3" id="3_7jpqs"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="4_x4ppc"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="5_5rb1d"]
+
+[node name="Musica08" type="Node2D" unique_id=1706521151]
+script = ExtResource("1_1qorm")
+
+[node name="GifDeFundo" type="VideoStreamPlayer" parent="." unique_id=1436423326]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_6ou3y")
+autoplay = true
+loop = true
+
+[node name="Musicadefundo" type="AudioStreamPlayer" parent="." unique_id=547563431]
+stream = ExtResource("3_7jpqs")
+autoplay = true
+
+[node name="RhythmDemo" parent="." unique_id=702561301 instance=ExtResource("4_x4ppc")]
+duration_seconds = 212.0
+players = 1
+next_scene_path = "uid://cbo5w0qdadojl"
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("5_5rb1d")]
+offset_left = 152.0
+offset_top = 202.0
+offset_right = 152.0
+offset_bottom = 202.0

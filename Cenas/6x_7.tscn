@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cokoafjk52m7a"]
+
+[ext_resource type="Script" uid="uid://dk8waasto35ug" path="res://scripts/6x_7.gd" id="1_5f8gc"]
+[ext_resource type="Texture2D" uid="uid://bv4ls8ufqcphh" path="res://Assets/FotoAvulsa/6x7.png" id="2_v3gsx"]
+[ext_resource type="FontFile" uid="uid://ftolv0bnr8ki" path="res://Assets/fonte/MonsterFriendFore.otf" id="3_0dhk7"]
+[ext_resource type="AudioStream" uid="uid://cu8105rqd53av" path="res://Assets/Musicas/final-fantasy-vii-victory-fanfare-1.mp3" id="4_0dhk7"]
+
+[node name="6x7" type="Control" unique_id=618895971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5f8gc")
+next_scene_path = "uid://d2o6octvff2nq"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1818666829]
+layout_mode = 0
+offset_right = 1365.0
+offset_bottom = 768.0
+texture = ExtResource("2_v3gsx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=344318719]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 666.0
+offset_right = 839.0
+offset_bottom = 734.0
+color = Color(0.46828073, 0.9999998, 0.93883896, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1269443194]
+
+[node name="PularCutscene" type="Button" parent="CanvasLayer" unique_id=715064168]
+offset_left = 505.0
+offset_top = 671.0
+offset_right = 835.0
+offset_bottom = 730.0
+theme_override_fonts/font = ExtResource("3_0dhk7")
+theme_override_font_sizes/font_size = 20
+text = "Pular"
+
+[node name="SextoAno" type="Label" parent="." unique_id=796183717]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 187.0
+offset_right = 373.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("3_0dhk7")
+theme_override_font_sizes/font_size = 20
+text = "Sexto Ano "
+
+[node name="SétimoAno" type="Label" parent="." unique_id=1805793047]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 179.0
+offset_right = 1132.0
+offset_bottom = 207.0
+theme_override_fonts/font = ExtResource("3_0dhk7")
+theme_override_font_sizes/font_size = 20
+text = "Setimo Ano"
+
+[node name="VS" type="Label" parent="." unique_id=1791511322]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.5
+offset_top = -25.0
+offset_right = 34.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_0dhk7")
+theme_override_font_sizes/font_size = 50
+text = "VS"
+
+[node name="Barra" type="Label" parent="." unique_id=91186488]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 203.0
+offset_right = 372.0
+offset_bottom = 229.0
+theme_override_fonts/font = ExtResource("3_0dhk7")
+theme_override_font_sizes/font_size = 25
+text = "--------------"
+
+[node name="Barra2" type="Label" parent="." unique_id=1223624779]
+layout_mode = 0
+offset_left = 962.0
+offset_top = 191.0
+offset_right = 1137.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("3_0dhk7")
+theme_override_font_sizes/font_size = 25
+text = "--------------"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=830485448]
+stream = ExtResource("4_0dhk7")
+autoplay = true

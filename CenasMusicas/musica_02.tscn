@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cowsugoc4padd"]
+
+[ext_resource type="VideoStream" uid="uid://d0feutpisanqd" path="res://Assets/VideoParaMusicas/DeathNote.ogv" id="1_kiin1"]
+[ext_resource type="AudioStream" uid="uid://ch0pn0mr42c2j" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Bt3D3Ca9nww_Death-Note-OP-1-4K-60FPS-Creditless_009_128k.mp3" id="2_av4n4"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="3_av4n4"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="4_ubxs2"]
+
+[node name="Musica02" type="Node2D" unique_id=175735689]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=258180080]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_kiin1")
+autoplay = true
+loop = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=517363996]
+stream = ExtResource("2_av4n4")
+autoplay = true
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("3_av4n4")]
+offset_left = 153.0
+offset_top = 252.0
+offset_right = 153.0
+offset_bottom = 252.0
+
+[node name="RhythmDemo" parent="." unique_id=74230357 instance=ExtResource("4_ubxs2")]
+duration_seconds = 81.0
+players = 1
+next_scene_path = "uid://cbo5w0qdadojl"

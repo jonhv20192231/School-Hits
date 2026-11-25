@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cvkjuilw6wgk1"]
+
+[ext_resource type="VideoStream" uid="uid://dgg1h683mhhxl" path="res://Assets/VideoParaMusicas/Naruto02.ogv" id="1_s86sh"]
+[ext_resource type="AudioStream" uid="uid://dpaf0b0b07ecg" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Vli10X4EQGU_Naruto-Shippuden-Op-Opening-8-4K-60FSP_009_128k.mp3" id="2_0kolh"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="3_0kolh"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="4_lteyc"]
+
+[node name="Musica05" type="Node2D" unique_id=1856897787]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=246678362]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_s86sh")
+autoplay = true
+loop = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=886469375]
+stream = ExtResource("2_0kolh")
+autoplay = true
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("3_0kolh")]
+offset_left = 150.0
+offset_top = 250.0
+offset_right = 150.0
+offset_bottom = 250.0
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("4_lteyc")]
+duration_seconds = 90.0
+players = 1
+next_scene_path = "uid://cbo5w0qdadojl"

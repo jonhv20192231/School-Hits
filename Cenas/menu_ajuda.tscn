@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bcjoijpbvqtr8"]
+
+[ext_resource type="Script" uid="uid://b1ywj385btq2w" path="res://scripts/menu_ajuda.gd" id="1_dyl67"]
+[ext_resource type="Texture2D" uid="uid://87o0fiby0yp2" path="res://Assets/FotoAvulsa/TelaDeControle.png" id="2_dyl67"]
+[ext_resource type="FontFile" uid="uid://ftolv0bnr8ki" path="res://Assets/fonte/MonsterFriendFore.otf" id="3_8aj2n"]
+[ext_resource type="FontFile" uid="uid://cn58a0bknuj8j" path="res://Assets/fonte/MonsterFriendBack.otf" id="4_8ja38"]
+
+[node name="MenuAjuda" type="Control" unique_id=967088791]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dyl67")
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=1908029050]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dyl67")
+expand_mode = 2
+
+[node name="Botao" type="Button" parent="." unique_id=1285582874]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 657.0
+offset_right = 200.0
+offset_bottom = 726.0
+theme_override_colors/font_color = Color(0.9806438, 0.8313326, 0.8504576, 1)
+theme_override_colors/font_focus_color = Color(0.8061843, 0.9070923, 0.72519183, 1)
+theme_override_fonts/font = ExtResource("3_8aj2n")
+theme_override_font_sizes/font_size = 42
+text = "Sair"
+flat = true
+
+[node name="Titulo" type="Label" parent="." unique_id=1126818533]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 20.0
+offset_right = 57.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_8ja38")
+theme_override_font_sizes/font_size = 25
+
+[node name="Como jogar" type="Label" parent="." unique_id=1842682491]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 97.0
+offset_right = 348.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("4_8ja38")
+theme_override_font_sizes/font_size = 25
+
+[node name="Explica1" type="Label" parent="Como jogar" unique_id=1543249949]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 48.0
+offset_right = 394.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("4_8ja38")
+
+[node name="Node" type="Node" parent="." unique_id=1792769004]
+
+[connection signal="pressed" from="Botao" to="." method="_on_botao_pressed"]

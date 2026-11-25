@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cmf5ga1g7yjug"]
+
+[ext_resource type="Texture2D" uid="uid://x7c7hcwooqed" path="res://Assets/Cenários/cenario 1.jpg" id="1_ooftu"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="2_46i82"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="3_j01k4"]
+[ext_resource type="AudioStream" uid="uid://s0amctcu46u4" path="res://Assets/Musicas/YTDown.com_YouTube_Media_3_52H8bk9WQ_ＡＺＵＬ-ＤＡ-ＣＯＲ-ＤＯ-ＭＡＲ-Lofi-remix_008_128k.mp3" id="4_ngbov"]
+
+[node name="CenaRitmo02" type="Node2D" unique_id=380470140]
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=2103067062]
+offset_right = 1369.0
+offset_bottom = 771.0
+size_flags_vertical = 4
+texture = ExtResource("1_ooftu")
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("2_46i82")]
+offset_left = 151.0
+offset_top = 237.0
+offset_right = 151.0
+offset_bottom = 237.0
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("3_j01k4")]
+duration_seconds = 200.0
+players = 1
+lane_order = PackedInt32Array(0)
+next_scene_path = "uid://coixu5h21g6ob"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2117094631]
+stream = ExtResource("4_ngbov")
+autoplay = true

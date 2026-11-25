@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://bhhjywnaugaa4"]
+
+[ext_resource type="Texture2D" uid="uid://x7c7hcwooqed" path="res://Assets/Cenários/cenario 1.jpg" id="1_axkff"]
+[ext_resource type="Texture2D" uid="uid://cqq7qd2i2gdg8" path="res://Assets/Personagens/Ana/b400a99c-c8a3-4557-a0fc-4949228cdc8f.jpg" id="2_o0ujh"]
+[ext_resource type="Script" uid="uid://nj8qyxbomcp4" path="res://Cenas/condutor.gd" id="3_f0oq2"]
+[ext_resource type="FontFile" uid="uid://ftolv0bnr8ki" path="res://Assets/fonte/MonsterFriendFore.otf" id="5_aii71"]
+
+[sub_resource type="GDScript" id="GDScript_lom1m"]
+script/source = "extends Node
+
+@onready var condutor: Node = $Condutor
+
+func _ready() -> void:
+	# Inicia a música e o condutor quando a cena carregar
+	if condutor and condutor.has_method(\"iniciar\"):
+		condutor.iniciar()
+"
+
+[sub_resource type="GDScript" id="GDScript_aii71"]
+script/source = "extends Node2D
+
+@export var tecla_input: String = \"ui_up\" # Altera para a ação definida nos Project Settings
+
+
+@onready var zona_de_hit: Node2D = $ZonaDeHit
+@onready var container_de_notas: Node2D = $ContainerDeNotas
+
+var notas_na_zona: Array = []
+
+func _ready() -> void:
+	if zona_de_hit:
+		zona_de_hit.body_entered.connect(_on_zona_body_entered)
+		zona_de_hit.body_exited.connect(_on_zona_body_exited)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(tecla_input):
+		verificar_acerto()
+
+func verificar_acerto() -> void:
+	if notas_na_zona.size() > 0:
+		var nota_alvo = notas_na_zona[0]
+		print(\"Acertaste na nota!\")
+		nota_alvo.queue_free()
+		notas_na_zona.pop_front()
+	else:
+		print(\"Erraste! (Tecla premida sem nota)\")
+
+func _on_zona_body_entered(body: Node2D) -> void:
+	if body.is_in_group(\"notas\"):
+		notas_na_zona.append(body)
+
+func _on_zona_body_exited(body: Node2D) -> void:
+	if body.is_in_group(\"notas\"):
+		if body in notas_na_zona:
+			notas_na_zona.erase(body)
+			print(\"Miss!\")
+			body.queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l23l"]
+
+[sub_resource type="GDScript" id="GDScript_blgnd"]
+script/source = "extends Node2D
+
+@export var tecla_input: String = \"ui_up\" # Ação configurada no Input Map
+
+@onready var zona_de_hit: Area2D = $ZonaDeHit
+@onready var container_de_notas: Node2D = $ContainerDeNotas
+
+var notas_na_zona: Array = []
+
+func _ready() -> void:
+	if zona_de_hit:
+		# Como usamos Area2D, o sinal correto é area_entered / area_exited
+		zona_de_hit.area_entered.connect(_on_zona_area_entered)
+		zona_de_hit.area_exited.connect(_on_zona_area_exited)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(tecla_input):
+		verificar_acerto()
+
+func verificar_acerto() -> void:
+	if notas_na_zones_tem_itens():
+		var nota_alvo = notas_na_zona[0]
+		if is_instance_valid(nota_alvo):
+			print(\"Acertou a nota!\")
+			nota_alvo.queue_free()
+			notas_na_zona.pop_front()
+	else:
+		print(\"Erraste! (Tecla premida sem nota na zona)\")
+
+func notas_na_zones_tem_itens() -> bool:
+	# Limpa referências inválidas caso alguma nota tenha sido apagada antes
+	while notas_na_zona.size() > 0 and not is_instance_valid(notas_na_zona[0]):
+		notas_na_zona.pop_front()
+	return notas_na_zona.size() > 0
+
+func _on_zona_area_entered(area: Area2D) -> void:
+	if area.is_in_group(\"notas\"):
+		notas_na_zona.append(area)
+
+func _on_zona_area_exited(area: Area2D) -> void:
+	if area.is_in_group(\"notas\"):
+		if area in notas_na_zona:
+			notas_na_zona.erase(area)
+			print(\"Miss! Passou da zona.\")
+			area.queue_free()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5l23l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o0ujh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="EstagioDeRitmo" type="Node2D" unique_id=1567843547]
+script = SubResource("GDScript_lom1m")
+
+[node name="PanoDeFundo" type="Sprite2D" parent="." unique_id=1419250324]
+position = Vector2(685.5, 382)
+scale = Vector2(1.3408203, 1.0130209)
+texture = ExtResource("1_axkff")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1529137079]
+
+[node name="Condutor" type="Node" parent="." unique_id=1192983985]
+script = ExtResource("3_f0oq2")
+
+[node name="Pistas" type="Node2D" parent="." unique_id=1766153265]
+
+[node name="TrackSusie" type="Node2D" parent="Pistas" unique_id=1326807268]
+script = SubResource("GDScript_aii71")
+
+[node name="PanoDefundoTrack" type="ColorRect" parent="Pistas/TrackSusie" unique_id=359849361]
+offset_left = 547.0
+offset_top = 10.0
+offset_right = 804.0
+offset_bottom = 524.0
+color = Color(1, 0.5803922, 1, 1)
+
+[node name="LinhadeMarca" type="Line2D" parent="Pistas/TrackSusie" unique_id=1767930365]
+
+[node name="ZonaDeHit" type="Area2D" parent="Pistas/TrackSusie" unique_id=2065266849]
+
+[node name="HitZona1" type="Marker2D" parent="Pistas/TrackSusie/ZonaDeHit" unique_id=1224242696]
+
+[node name="HitZona2" type="Marker2D" parent="Pistas/TrackSusie/ZonaDeHit" unique_id=1041955187]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pistas/TrackSusie/ZonaDeHit" unique_id=1445629950]
+shape = SubResource("RectangleShape2D_5l23l")
+
+[node name="ContainerDeNotas" type="Node2D" parent="Pistas/TrackSusie" unique_id=536889538]
+script = SubResource("GDScript_blgnd")
+
+[node name="EstágioDoPersonagem" type="Node2D" parent="." unique_id=84204271]
+
+[node name="Susie" type="AnimatedSprite2D" parent="EstágioDoPersonagem" unique_id=941338008]
+position = Vector2(679, 621)
+scale = Vector2(0.39814815, 0.3370044)
+sprite_frames = SubResource("SpriteFrames_5l23l")
+frame_progress = 0.47175103
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=128877164]
+
+[node name="Pontos" type="Label" parent="HUD" unique_id=1971504680]
+offset_left = 31.0
+offset_top = 719.0
+offset_right = 165.0
+offset_bottom = 742.0
+theme_override_fonts/font = ExtResource("5_aii71")
+text = "Pontuação"
+
+[node name="Combos" type="Label" parent="HUD" unique_id=1249335815]
+offset_left = 1250.0
+offset_top = 732.0
+offset_right = 1350.0
+offset_bottom = 755.0
+theme_override_fonts/font = ExtResource("5_aii71")
+text = "Combos"
+
+[node name="Vida" type="Label" parent="HUD" unique_id=1127691389]
+offset_left = 651.0
+offset_top = 732.0
+offset_right = 709.0
+offset_bottom = 769.0
+theme_override_fonts/font = ExtResource("5_aii71")
+text = "Vida
+"

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b2tythvn7eowk"]
+
+[ext_resource type="Script" uid="uid://cxnonrj25h4qs" path="res://CenasMusicas/musica_01.gd" id="1_to164"]
+[ext_resource type="VideoStream" uid="uid://biujh456d5hxw" path="res://Assets/VideoParaMusicas/Oasis.ogv" id="2_to164"]
+[ext_resource type="AudioStream" uid="uid://db7bhgagshh6r" path="res://Assets/Musicas/Oasis-Wonderwall.mp3" id="3_to164"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="4_asthq"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="5_sychf"]
+
+[node name="Musica13" type="Node2D" unique_id=1706521151]
+script = ExtResource("1_to164")
+
+[node name="GifDeFundo" type="VideoStreamPlayer" parent="." unique_id=1436423326]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_to164")
+autoplay = true
+loop = true
+
+[node name="Musicadefundo" type="AudioStreamPlayer" parent="." unique_id=547563431]
+stream = ExtResource("3_to164")
+autoplay = true
+
+[node name="RhythmDemo" parent="." unique_id=702561301 instance=ExtResource("4_asthq")]
+duration_seconds = 277.0
+players = 1
+next_scene_path = "uid://cbo5w0qdadojl"
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("5_sychf")]
+offset_left = 152.0
+offset_top = 202.0
+offset_right = 152.0
+offset_bottom = 202.0

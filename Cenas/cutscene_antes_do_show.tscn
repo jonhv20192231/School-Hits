@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://oh2ph5tfbux"]
+
+[ext_resource type="Script" uid="uid://bpklgvcdcmt42" path="res://scripts/cutscene_antes_do_show.gd" id="1_6rqd4"]
+[ext_resource type="VideoStream" uid="uid://dfurv1umsb1rf" path="res://cutscenes/Cutscenes-antes-do-show_720p_.ogv" id="2_7iggp"]
+
+[node name="CutsceneAntesDoShow" type="Control" unique_id=618895971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6rqd4")
+next_scene_path = "uid://cmobmg7ktq7ii"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=235293790]
+layout_mode = 0
+offset_right = 1366.0
+offset_bottom = 768.0
+stream = ExtResource("2_7iggp")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1269443194]
+
+[node name="PularCutscene" type="Button" parent="CanvasLayer" unique_id=715064168]
+offset_left = 1167.0
+offset_top = 674.0
+offset_right = 1326.0
+offset_bottom = 739.0
+text = "Pular"

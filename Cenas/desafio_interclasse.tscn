@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c7f5m3oeqq5xw"]
+
+[ext_resource type="Texture2D" uid="uid://c8yxuyf4kndc5" path="res://Assets/Cenários/cenario 2.jpg" id="1_q1e0m"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="2_q1e0m"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="3_7202f"]
+[ext_resource type="AudioStream" uid="uid://b3rdh5o3blhxs" path="res://Assets/Musicas/YTDown.com_YouTube_Media_szts-5Zs5_8_Cazuza-Exagerado-Áudio-Oficial_009_128k.mp3" id="3_q1e0m"]
+
+[node name="DesafioInterclasse" type="Node2D" unique_id=1655473422]
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=558632863]
+offset_right = 1369.0
+offset_bottom = 771.0
+size_flags_vertical = 4
+texture = ExtResource("1_q1e0m")
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("2_q1e0m")]
+duration_seconds = 223.0
+next_scene_path = "uid://cokoafjk52m7a"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=875553603]
+stream = ExtResource("3_q1e0m")
+autoplay = true
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("3_7202f")]
+offset_left = 152.0
+offset_top = 248.0
+offset_right = 152.0
+offset_bottom = 248.0

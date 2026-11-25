@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d2o6octvff2nq"]
+
+[ext_resource type="Texture2D" uid="uid://c8yxuyf4kndc5" path="res://Assets/Cenários/cenario 2.jpg" id="1_d10us"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="2_d10us"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="3_4q1bg"]
+[ext_resource type="AudioStream" uid="uid://crrbar8dox1mt" path="res://Assets/Musicas/YTDown.com_YouTube_Media_8mcsaEqrbfU_Tom-Jobim-Garota-de-Ipanema-Inédito_009_128k.mp3" id="3_d10us"]
+
+[node name="DesafioInterclasse02" type="Node2D" unique_id=1655473422]
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=558632863]
+offset_right = 1369.0
+offset_bottom = 771.0
+size_flags_vertical = 4
+texture = ExtResource("1_d10us")
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("2_d10us")]
+duration_seconds = 242.0
+next_scene_path = "uid://bh3vpra062cn0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=875553603]
+stream = ExtResource("3_d10us")
+autoplay = true
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("3_4q1bg")]
+offset_left = 152.0
+offset_top = 248.0
+offset_right = 152.0
+offset_bottom = 248.0

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cmoolufon08w7"]
+
+[ext_resource type="Texture2D" uid="uid://c8yxuyf4kndc5" path="res://Assets/Cenários/cenario 2.jpg" id="1_sf4ue"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="2_sf4ue"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="3_rovqw"]
+[ext_resource type="AudioStream" uid="uid://cje0o0b42e1qi" path="res://Assets/Musicas/YTDown.com_YouTube_Media_Co49RdchlRk_𝖈𝖆́𝖑𝖎𝖈𝖊-𝖇𝖊𝖗𝖘𝖊𝖗𝖐_008_128k.mp3" id="3_sf4ue"]
+
+[node name="DesafioInterclasse04" type="Node2D" unique_id=1655473422]
+
+[node name="PanoDeFundo" type="TextureRect" parent="." unique_id=558632863]
+offset_right = 1369.0
+offset_bottom = 771.0
+size_flags_vertical = 4
+texture = ExtResource("1_sf4ue")
+
+[node name="RhythmDemo" parent="." unique_id=1039428101 instance=ExtResource("2_sf4ue")]
+duration_seconds = 241.0
+next_scene_path = "uid://bhrpo74xcck30"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=875553603]
+stream = ExtResource("3_sf4ue")
+autoplay = true
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("3_rovqw")]
+offset_left = 152.0
+offset_top = 248.0
+offset_right = 152.0
+offset_bottom = 248.0

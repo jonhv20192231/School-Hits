@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://bnndrrk71ylsj"]
+
+[ext_resource type="Texture2D" uid="uid://djmpxnhmg88at" path="res://Assets/FotoAvulsa/escolher musica.png" id="1_3xh2s"]
+[ext_resource type="Script" uid="uid://bcv0mq33cqi5b" path="res://Cenas/escolha_as_suas_musicas.gd" id="1_5lsur"]
+[ext_resource type="FontFile" uid="uid://ftolv0bnr8ki" path="res://Assets/fonte/MonsterFriendFore.otf" id="2_5lsur"]
+[ext_resource type="AudioStream" uid="uid://bb7llbpodetyp" path="res://Assets/Musicas/YTDown.com_YouTube_Media_iV1o6tbZLZk_Persona-4-OST-02-A-Corner-of-Memories_008_128k.mp3" id="2_37myp"]
+[ext_resource type="Texture2D" uid="uid://cm0mdiej2tcs5" path="res://Assets/IconeDasMusicas/Steins-Gates.jpg" id="5_vycrc"]
+[ext_resource type="Texture2D" uid="uid://blk04pu6igjcb" path="res://Assets/IconeDasMusicas/DeathNote.jpg" id="6_82ire"]
+[ext_resource type="Texture2D" uid="uid://lfld7oahh4gq" path="res://Assets/IconeDasMusicas/Evangelion.png" id="7_ola25"]
+[ext_resource type="Texture2D" uid="uid://c434cyjkdabct" path="res://Assets/IconeDasMusicas/Naruto01.jpg" id="8_5e7yy"]
+[ext_resource type="Texture2D" uid="uid://dh4addmr76b0x" path="res://Assets/IconeDasMusicas/Naruto02.jpg" id="9_ivvvg"]
+[ext_resource type="Texture2D" uid="uid://d1ncdurypmbpu" path="res://Assets/IconeDasMusicas/billy idol.jpg" id="10_xyjso"]
+[ext_resource type="Texture2D" uid="uid://ds8su6rxrrlpl" path="res://Assets/IconeDasMusicas/beach house.png" id="11_ck2mc"]
+[ext_resource type="Texture2D" uid="uid://7njv6045remg" path="res://Assets/IconeDasMusicas/vagabond.jpg" id="12_ola25"]
+
+[node name="EscolhaAsSuasMusicas" type="Control" unique_id=475928612]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5lsur")
+metadata/_edit_horizontal_guides_ = [-206.0]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=29398542]
+stream = ExtResource("2_37myp")
+autoplay = true
+
+[node name="FotoDeFundo" type="Sprite2D" parent="." unique_id=1940062628]
+position = Vector2(680, 387.49997)
+scale = Vector2(1.002928, 1.0026008)
+texture = ExtResource("1_3xh2s")
+
+[node name="Musica01" type="Button" parent="." unique_id=1384547422]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 65.0
+offset_right = 498.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "Steins;Gate Opening 
+| Fatima by Kanako Itou"
+
+[node name="Musica02" type="Button" parent="." unique_id=213863622]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 204.0
+offset_right = 442.0
+offset_bottom = 229.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "Death Note opening"
+
+[node name="Musica03" type="Button" parent="." unique_id=405274416]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 198.0
+offset_right = 954.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "Naruto Shippuden 
+Opening 3 | Blue Bird"
+
+[node name="Musica04" type="Button" parent="." unique_id=989234273]
+layout_mode = 0
+offset_left = 658.0
+offset_top = 67.0
+offset_right = 994.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "Neon Genesis Evangelion 
+(A Cruel Angel's Thesis"
+
+[node name="Musica05" type="Button" parent="." unique_id=1402553703]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 336.0
+offset_right = 611.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "Naruto Shippuden Opening 8 | 
+Diver by NICO Touches the Walls"
+
+[node name="Musica06" type="Button" parent="." unique_id=252273200]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 489.0
+offset_right = 503.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "BEACH HOUSE Space Song"
+
+[node name="Musica07" type="Button" parent="." unique_id=790625375]
+layout_mode = 0
+offset_left = 765.0
+offset_top = 337.0
+offset_right = 973.0
+offset_bottom = 379.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "Billy Idol Eyes 
+Without a Face"
+
+[node name="Musica08" type="Button" parent="." unique_id=1143736424]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 490.0
+offset_right = 805.0
+offset_bottom = 521.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+text = "Boa - Duvet"
+
+[node name="Sair" type="Button" parent="." unique_id=1765218934]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 702.0
+offset_right = 127.0
+offset_bottom = 754.0
+theme_override_fonts/font = ExtResource("2_5lsur")
+theme_override_font_sizes/font_size = 20
+text = "Sair"
+
+[node name="Icones" type="Node" parent="." unique_id=320864723]
+
+[node name="SteinsGateIcon" type="Sprite2D" parent="Icones" unique_id=1874472398]
+position = Vector2(99.99999, 80)
+scale = Vector2(0.29091424, 0.26579815)
+texture = ExtResource("5_vycrc")
+
+[node name="DeathNoteIcon" type="Sprite2D" parent="Icones" unique_id=1877477413]
+position = Vector2(101.00001, 218)
+scale = Vector2(0.24531835, 0.23408242)
+texture = ExtResource("6_82ire")
+
+[node name="EvangelionIcon" type="Sprite2D" parent="Icones" unique_id=1905443330]
+position = Vector2(578, 85.00001)
+scale = Vector2(0.3025727, 0.2678971)
+texture = ExtResource("7_ola25")
+
+[node name="Naruto01Icon" type="Sprite2D" parent="Icones" unique_id=1047290178]
+position = Vector2(577.56244, 217.96877)
+scale = Vector2(0.24345665, 0.2237139)
+texture = ExtResource("8_5e7yy")
+
+[node name="Naruto02Icon" type="Sprite2D" parent="Icones" unique_id=1452809486]
+position = Vector2(101.00001, 354)
+scale = Vector2(0.29362413, 0.28131992)
+texture = ExtResource("9_ivvvg")
+
+[node name="BillyIdolIcon" type="Sprite2D" parent="Icones" unique_id=1904607023]
+position = Vector2(690, 357)
+scale = Vector2(0.44, 0.42000002)
+texture = ExtResource("10_xyjso")
+
+[node name="BeachHouseIcon" type="Sprite2D" parent="Icones" unique_id=316070526]
+position = Vector2(101, 503.49997)
+scale = Vector2(0.29999998, 0.27973562)
+texture = ExtResource("11_ck2mc")
+
+[node name="VagabondIcon" type="Sprite2D" parent="Icones" unique_id=1416414978]
+position = Vector2(570.00006, 506)
+scale = Vector2(0.5888889, 0.5666667)
+texture = ExtResource("12_ola25")
+
+[connection signal="pressed" from="Musica01" to="." method="_on_musica_01_pressed"]
+[connection signal="pressed" from="Musica02" to="." method="_on_musica_02_pressed"]
+[connection signal="pressed" from="Musica03" to="." method="_on_musica_03_pressed"]
+[connection signal="pressed" from="Musica04" to="." method="_on_musica_04_pressed"]
+[connection signal="pressed" from="Musica05" to="." method="_on_musica_05_pressed"]
+[connection signal="pressed" from="Musica06" to="." method="_on_musica_06_pressed"]
+[connection signal="pressed" from="Musica07" to="." method="_on_musica_07_pressed"]
+[connection signal="pressed" from="Musica08" to="." method="_on_musica_08_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

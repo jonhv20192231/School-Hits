@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ds2atgdqwd6cc"]
+
+[ext_resource type="Script" uid="uid://cxnonrj25h4qs" path="res://CenasMusicas/musica_01.gd" id="1_0pejc"]
+[ext_resource type="VideoStream" uid="uid://brn3dbmupwjbo" path="res://Assets/VideoParaMusicas/Steingate.ogv" id="1_5sibk"]
+[ext_resource type="AudioStream" uid="uid://chirxhayl6cm6" path="res://Assets/Musicas/YTDown.com_YouTube_Media_1xJbdY9B3A8_Steins-Gate-Opening-Fatima-by-Kanako-Itou_009_128k.mp3" id="2_ypeaq"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="3_y7jmb"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="5_hichw"]
+
+[node name="Musica01" type="Node2D" unique_id=1706521151]
+script = ExtResource("1_0pejc")
+
+[node name="GifDeFundo" type="VideoStreamPlayer" parent="." unique_id=1436423326]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_5sibk")
+autoplay = true
+loop = true
+
+[node name="Musicadefundo" type="AudioStreamPlayer" parent="." unique_id=547563431]
+stream = ExtResource("2_ypeaq")
+autoplay = true
+
+[node name="RhythmDemo" parent="." unique_id=702561301 instance=ExtResource("5_hichw")]
+duration_seconds = 90.0
+players = 1
+next_scene_path = "uid://cbo5w0qdadojl"
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("3_y7jmb")]
+offset_left = 152.0
+offset_top = 202.0
+offset_right = 152.0
+offset_bottom = 202.0

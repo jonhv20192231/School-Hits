@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c3et5e6mx84b7"]
+
+[ext_resource type="Script" uid="uid://cxnonrj25h4qs" path="res://CenasMusicas/musica_01.gd" id="1_f41hj"]
+[ext_resource type="VideoStream" uid="uid://b8mx7vnsg4yb7" path="res://Assets/VideoParaMusicas/The-Killers.ogv" id="2_f41hj"]
+[ext_resource type="AudioStream" uid="uid://b5tie6qi0a7pn" path="res://Assets/Musicas/The-Killers-Mr-Brightside.mp3" id="3_f41hj"]
+[ext_resource type="PackedScene" uid="uid://c1dd33f15bhmv" path="res://RhythmStage/Demo/rhythm_demo.tscn" id="4_m743v"]
+[ext_resource type="PackedScene" uid="uid://cveeoetewi3fk" path="res://Cenas/menu_de_pausa.tscn" id="5_4l03r"]
+
+[node name="Musica15" type="Node2D" unique_id=1706521151]
+script = ExtResource("1_f41hj")
+
+[node name="GifDeFundo" type="VideoStreamPlayer" parent="." unique_id=1436423326]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_f41hj")
+autoplay = true
+loop = true
+
+[node name="Musicadefundo" type="AudioStreamPlayer" parent="." unique_id=547563431]
+stream = ExtResource("3_f41hj")
+autoplay = true
+
+[node name="RhythmDemo" parent="." unique_id=702561301 instance=ExtResource("4_m743v")]
+duration_seconds = 227.0
+players = 1
+next_scene_path = "uid://cbo5w0qdadojl"
+
+[node name="MenuDePausa" parent="." unique_id=612729983 instance=ExtResource("5_4l03r")]
+offset_left = 152.0
+offset_top = 202.0
+offset_right = 152.0
+offset_bottom = 202.0

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://b7qb11qrpkmqi"]
+
+[ext_resource type="Script" uid="uid://ilo04kgbacri" path="res://scripts/recrutar_cena_03.gd" id="1_84ats"]
+[ext_resource type="Texture2D" uid="uid://ctbbdpsy0mft7" path="res://Assets/Cenários/cenario 4.png" id="2_0ui3e"]
+[ext_resource type="Texture2D" uid="uid://cr5xsn8x0r2jj" path="res://Assets/Personagens/Túlio/watermarked_img_3440944877823424612-removebg-preview (1).png" id="2_y8y5x"]
+[ext_resource type="FontFile" uid="uid://cn58a0bknuj8j" path="res://Assets/fonte/MonsterFriendBack.otf" id="4_s2erq"]
+[ext_resource type="AudioStream" uid="uid://dm3n55innelav" path="res://Assets/Musicas/recrutar.mp3" id="5_8o48o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84ats"]
+atlas = ExtResource("2_y8y5x")
+region = Rect2(124, 0, 124, 167)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ui3e"]
+atlas = ExtResource("2_y8y5x")
+region = Rect2(248, 0, 124, 167)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wiw2y"]
+atlas = ExtResource("2_y8y5x")
+region = Rect2(372, 0, 124, 167)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5l23l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84ats")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ui3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wiw2y")
+}],
+"loop": 1,
+"name": &"comemora",
+"speed": 5.0
+}]
+
+[node name="RecrutarCena03" type="Node2D" unique_id=1740365842]
+script = ExtResource("1_84ats")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1382866863]
+offset_right = 1365.0
+offset_bottom = 774.0
+texture = ExtResource("2_0ui3e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=479723693]
+position = Vector2(663, 606)
+scale = Vector2(1.798293, 1.2959261)
+sprite_frames = SubResource("SpriteFrames_5l23l")
+animation = &"comemora"
+frame_progress = 0.3144243
+
+[node name="Proximofase" type="Button" parent="." unique_id=1809144300]
+offset_left = 991.0
+offset_top = 705.0
+offset_right = 1340.0
+offset_bottom = 762.0
+theme_override_fonts/font = ExtResource("4_s2erq")
+theme_override_font_sizes/font_size = 25
+text = "Proximo desafio"
+
+[node name="Parabéns" type="Label" parent="." unique_id=315083814]
+offset_left = 236.0
+offset_top = 310.0
+offset_right = 1131.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("4_s2erq")
+theme_override_font_sizes/font_size = 25
+text = "Parabens, voce recrutou um novo membro!!!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1340557284]
+stream = ExtResource("5_8o48o")
+autoplay = true
+
+[connection signal="pressed" from="Proximofase" to="." method="_on_proximofase_pressed"]

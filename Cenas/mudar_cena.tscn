@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bbc2877wrvddg"]
+
+[ext_resource type="Script" uid="uid://befrkjn1m6wu8" path="res://scripts/mudar_cena.gd" id="1_fh6gg"]
+[ext_resource type="Texture2D" uid="uid://b53e5bwqu1hxp" path="res://Assets/Tileset/images.jpg" id="2_c71xk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5l23l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c71xk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l23l"]
+size = Vector2(2, 2)
+
+[node name="MudarCena" type="Area2D" unique_id=1328260252]
+collision_layer = 0
+script = ExtResource("1_fh6gg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1514438101]
+scale = Vector2(0.0036101171, 0.003610121)
+sprite_frames = SubResource("SpriteFrames_5l23l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188817054]
+shape = SubResource("RectangleShape2D_5l23l")

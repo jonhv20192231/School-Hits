@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cmobmg7ktq7ii"]
+
+[ext_resource type="Script" uid="uid://cocfaibsj886m" path="res://scripts/6x_9.gd" id="1_fbqxy"]
+[ext_resource type="Texture2D" uid="uid://d3l2id2hers6c" path="res://Assets/FotoAvulsa/6x9.png" id="2_lxtgb"]
+[ext_resource type="FontFile" uid="uid://ftolv0bnr8ki" path="res://Assets/fonte/MonsterFriendFore.otf" id="3_8onww"]
+[ext_resource type="AudioStream" uid="uid://cu8105rqd53av" path="res://Assets/Musicas/final-fantasy-vii-victory-fanfare-1.mp3" id="4_8onww"]
+
+[node name="6x9" type="Control" unique_id=618895971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fbqxy")
+next_scene_path = "uid://cmoolufon08w7"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2120200846]
+layout_mode = 0
+offset_right = 1366.0
+offset_bottom = 769.0
+texture = ExtResource("2_lxtgb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=836018288]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 666.0
+offset_right = 839.0
+offset_bottom = 734.0
+color = Color(0.46828073, 0.9999998, 0.93883896, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1269443194]
+
+[node name="PularCutscene" type="Button" parent="CanvasLayer" unique_id=715064168]
+offset_left = 505.0
+offset_top = 668.0
+offset_right = 836.0
+offset_bottom = 731.0
+theme_override_fonts/font = ExtResource("3_8onww")
+theme_override_font_sizes/font_size = 20
+text = "Pular"
+
+[node name="SextoAno" type="Label" parent="." unique_id=828981271]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 187.0
+offset_right = 373.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("3_8onww")
+theme_override_font_sizes/font_size = 20
+text = "Sexto Ano "
+
+[node name="SétimoAno" type="Label" parent="." unique_id=1548926218]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 179.0
+offset_right = 1132.0
+offset_bottom = 207.0
+theme_override_fonts/font = ExtResource("3_8onww")
+theme_override_font_sizes/font_size = 20
+text = "Nono Ano"
+
+[node name="VS" type="Label" parent="." unique_id=1295935996]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.5
+offset_top = -25.0
+offset_right = 34.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_8onww")
+theme_override_font_sizes/font_size = 50
+text = "VS"
+
+[node name="Barra" type="Label" parent="." unique_id=740103307]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 203.0
+offset_right = 372.0
+offset_bottom = 229.0
+theme_override_fonts/font = ExtResource("3_8onww")
+theme_override_font_sizes/font_size = 25
+text = "--------------"
+
+[node name="Barra2" type="Label" parent="." unique_id=1419529484]
+layout_mode = 0
+offset_left = 962.0
+offset_top = 191.0
+offset_right = 1137.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("3_8onww")
+theme_override_font_sizes/font_size = 25
+text = "--------------"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=260299995]
+stream = ExtResource("4_8onww")
+autoplay = true
