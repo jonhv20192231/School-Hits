@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://RhythmStage/Demo/sprites/marcos/f0.png" id="1"]
+[ext_resource type="Texture2D" path="res://RhythmStage/Demo/sprites/marcos/f1.png" id="2"]
+[ext_resource type="Texture2D" path="res://RhythmStage/Demo/sprites/marcos/f2.png" id="3"]
+[ext_resource type="Texture2D" path="res://RhythmStage/Demo/sprites/marcos/f3.png" id="4"]
+
+[resource]
+animations = [
+{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": false,
+"name": &"hit_0",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": false,
+"name": &"hit_1",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
+"loop": false,
+"name": &"hit_2",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": false,
+"name": &"miss",
+"speed": 14.0
+}]
